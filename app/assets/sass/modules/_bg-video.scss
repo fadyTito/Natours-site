@@ -1,0 +1,16 @@
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .15;
+    overflow: hidden;
+
+    &__content {
+        height: 100%; 
+        width: 100%;
+        object-fit: cover; // l object-fit 3shan ast3mlha lazm a7dd l width we l height bta3t l element nfso l2nha btzbt l sora aw l video 3la m2as l element nfso msh l parent
+    }
+}

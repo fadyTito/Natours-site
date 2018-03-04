@@ -1,0 +1,89 @@
+.btn {
+  &, &:link, &:visited {
+    display: inline-block;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: all .2s;
+    position: relative;
+    border: none;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 10rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all .5s;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($black, .2);
+  }
+
+  &:hover {
+    &::after {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 .5rem 1rem rgba($black, .2);
+  }
+    
+  &--primary {
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;  
+    border-radius: 10rem; 
+    background-color: red;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $primary;
+    padding: .3rem;
+    border-bottom: 1px solid $primary !important;
+    transition: all .2s;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &--bg-white {
+    background-color: $white;
+    color: $grey-2;
+    
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  &--bg-green {
+    background-color: $primary;
+    color: $white;
+    
+    &::after {
+      background-color: $primary;
+    }
+  }
+
+  &--animated {
+    animation: moveInTop 0.5s ease-out 0.75s backwards;
+  }
+
+  &--t-margin {
+    margin-top: 2rem;
+  }
+}

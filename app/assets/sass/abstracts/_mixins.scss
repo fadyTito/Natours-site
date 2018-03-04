@@ -1,0 +1,65 @@
+@mixin clearfix {
+    &::after { 
+        content: "";
+        display: table;
+        clear: both;
+     }
+}
+
+
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@mixin greenGradient {
+    background-image: linear-gradient(to right bottom, $primary-light, $primary-dark);
+}
+
+@mixin greenImageGradient($image) {
+    background-image: linear-gradient(to right bottom, rgba($primary-light, .8), rgba($primary-dark, .8)), url($image);
+    background-size: cover;
+}
+
+@mixin greenIconGradient {
+    display: inline-block;
+    background-image: linear-gradient(to right, $primary-light, $primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* MEDIA QUERIES MANAGER */
+
+/* 
+0-600px:        Phone
+600-900px:      Tablet portrait
+900-1200px:     Tablet landscape
+[1200-1800px]:  our initial styles
+1800px +:       Big desktop
+ */
+
+/* em and rem in media queries take their font-size from the browser not the html root element and we use em instead of rem because it's more reliable and compatible in browsers  SO 1 EM EQUALS 16PX HERE*/
+
+
+ @mixin respond($breakPoint) {
+    @if $breakPoint == phone {
+        @media (max-width: 37.5em) { @content }; /* 600px */
+    }
+
+     @if $breakPoint == tab-port {
+         @media (max-width: 56.25em) { @content }; /* 900px */
+     }
+
+     @if $breakPoint == tab-land {
+        @media (max-width: 75em) { @content }; /* 1200px */
+    }
+
+    @if $breakPoint == big-desk {
+        @media (min-width: 112.5em) { @content }; /* +1800px */
+    }
+ }
+

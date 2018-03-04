@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:sass": "node-sass app/assets/sass/styles.scss app/assets/styles/styles.css -w",
+    "liveServer": "live-server app",
+    "start": "npm-run-all --parallel liveServer watch:sass"
   },
   "author": "fady tito",
   "license": "ISC",

@@ -1,0 +1,22 @@
+.feature-box {
+    background-color: rgba($white, .78);
+    font-size: 6rem;
+    padding: 2.5rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($black, .15);
+    transition: all 0.3s;
+    text-align: center;
+
+    @include respond(tab-land) {
+        /* height: 40rem; */
+    }
+
+    &__icon {
+       @include greenIconGradient;
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+        box-shadow: 0 3rem 8rem rgba($black, .3);
+    }
+}
