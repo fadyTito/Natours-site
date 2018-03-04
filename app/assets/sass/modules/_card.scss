@@ -1,10 +1,12 @@
-// ANIMATIONS AND GENERAL STYLING RULES
+/* ANIMATIONS AND GENERAL STYLING RULES */
 
+/* The container of the two sides elements of the card */
 .card {
     height: 52rem;
     position: relative;
-    perspective: 1500px; // 3shan i3ml t2ser an l sf7a btt2lb(ideny spacy gwa l shasha msh mogrd 7aga btlf mn gher space gwa l shasha
+    perspective: 1500px; /* to give the effect of wrapping the card inside screen, in other words, to make distance in z axis */
 
+    /* Common styling for two sides */
     &__side {
         position: absolute;
         top: 0;
@@ -15,14 +17,14 @@
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($black, .15);
         backface-visibility: hidden;
-        overflow: hidden; //3shan l sora mtghtesh 3la l border
+        overflow: hidden; 
 
         &--front {
             background-color: $white;
         }
     
         &--back {
-            transform: rotateY(180deg);
+            transform: rotateY(180deg); /* initially hide the back side */
             
             &-1 {
                 background-image: linear-gradient(to right bottom, $secondary-1-light, $secondary-1-dark);
@@ -38,7 +40,6 @@
         }
     }
 
-    // 7tet l code da hna msh gwa l __side 3shan lazm ikon l element l na 3aizo it2sr blhover 3la element tany da ikon children llelement
     &:hover &__side--front {
         transform: rotateY(-180deg); 
     }
@@ -127,10 +128,7 @@
         width: 90%;
         color: $white;
         text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include absoluteCenter;
     
         span {
             display: block;
@@ -145,7 +143,9 @@
         }
     }
 
-    @include respond(tab-port) {
+    /* small and touch screen styling */
+
+    @media (max-width:56.25em), (hover: none) {
         height: auto;
         border-radius: 3px;
         background-color: $white;

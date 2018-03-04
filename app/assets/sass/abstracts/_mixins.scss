@@ -6,7 +6,6 @@
      }
 }
 
-
 @mixin absoluteCenter {
     position: absolute;
     top: 50%;
@@ -14,6 +13,7 @@
     transform: translate(-50%, -50%);
 }
 
+/* Background colors */
 
 @mixin greenGradient {
     background-image: linear-gradient(to right bottom, $primary-light, $primary-dark);
@@ -42,7 +42,7 @@
 1800px +:       Big desktop
  */
 
-/* em and rem in media queries take their font-size from the browser not the html root element and we use em instead of rem because it's more reliable and compatible in browsers  SO 1 EM EQUALS 16PX HERE*/
+/* em and rem in media queries take their font-size from the browser not the html root element and we use em instead of rem because it's more reliable and compatible in browsers - SO 1 EM EQUALS 16PX HERE*/
 
 
  @mixin respond($breakPoint) {

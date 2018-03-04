@@ -18,7 +18,9 @@
         transform: skewX(0);
     }
 
-    &__figure-shape{
+    /* Circle shape and wrapping text styling */
+
+    &__figure{
         width: 15rem;
         height: 15rem;
         float: left;
@@ -34,7 +36,6 @@
 
     &__figure__image {
         height: 100%;
-        max-width: initial;
         transform: translateX(-4rem) scale(1.4);
         transition: all .5s;
         backface-visibility: hidden;

@@ -1,4 +1,9 @@
 .navigation {
+
+    /* Button, icon and nav background styling */
+
+    /* The checkbox input is responsible for functionality, when label is clicked then input will be checked, in this case we can control what happen then */
+    
     &__checkbox {
         display: none;
     }
@@ -17,8 +22,8 @@
         text-align: center;
 
         @include respond(tab-port) {
-            top: 4rem;
-            right: 4rem;
+            top: 3rem;
+            right: 3rem;
         }
     }
 
@@ -34,11 +39,42 @@
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
         @include respond(tab-port) {
-            top: 4.5rem;
-            right: 4.5rem;
+            top: 3.25rem;
+            right: 3.25rem;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &, &::before, &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $black;
+            display: inline-block;
         }
 
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before { top: -.8rem; }
+        &::after { top: .8rem; }
     }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    /* Nav body styling */
 
     &__nav {
         height: 100vh;
@@ -46,20 +82,15 @@
         top: 0;
         left: 0;
         z-index: 15;
-        
         opacity: 0;
         width: 0;
         visibility: hidden;
-
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
     &__list {
-        position: absolute;
+        @include absoluteCenter;
         width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
         list-style: none;
         text-align: center;
     }
@@ -91,11 +122,10 @@
             color: $primary-dark;
             transform: translateX(1rem);
         }
-        
     }
 
-
-
+    /* Functionality */
+    
     &__checkbox:checked ~ &__background {
         transform: scale(80);
     }
@@ -104,37 +134,6 @@
         opacity: 1;
         width: 100%;
         visibility: visible;
-    }
-
-
-    &__icon {
-        position: relative;
-        margin-top: 3.5rem;
-
-        &, &::before, &::after {
-            width: 3rem;
-            height: 2px;
-            background-color: $black;
-            display: inline-block;
-        }
-
-        &::before, &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            transition: all .2s;
-        }
-
-        &::before { top: -.8rem; }
-        &::after { top: .8rem; }
-    }
-
-    &__button:hover &__icon::before {
-        top: -1rem;
-    }
-
-    &__button:hover &__icon::after {
-        top: 1rem;
     }
 
     &__checkbox:checked + &__button &__icon {

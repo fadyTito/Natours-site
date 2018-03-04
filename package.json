@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass app/assets/sass/styles.scss app/assets/styles/styles.css -w",
+    "watch:sass": "node-sass app/assets/sass/styles.scss app/assets/css/styles.css -w",
     "liveServer": "live-server app",
     "start": "npm-run-all --parallel liveServer watch:sass",
     "compile:sass": "node-sass app/assets/sass/styles.scss app/assets/css/styles.comp.css",
