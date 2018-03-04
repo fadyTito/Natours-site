@@ -496,20 +496,6 @@ a {
     transform: translate(-50%, -50%);
     opacity: 1; }
 
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: .15;
-  overflow: hidden; }
-  .bg-video__content {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; }
-
 .form {
   /* The checkbox input is responsible for functionality, when label is clicked then input will be checked, in this case we can control what happen then */ }
   .form__group:not(:last-child) {
@@ -848,7 +834,11 @@ a {
 
 .section-about {
   margin-top: -20vh;
-  padding: 22rem 3rem; }
+  padding: 22rem 3rem;
+  /* 1200px */ }
+  @media (max-width: 75em) {
+    .section-about {
+      padding: 17rem 3rem 20rem 3rem; } }
 
 .section-features {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../images/nat-4.jpg");

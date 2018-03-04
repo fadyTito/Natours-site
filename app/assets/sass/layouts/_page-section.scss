@@ -21,6 +21,10 @@
 .section-about {
     margin-top: -20vh;
     padding: 22rem 3rem;
+
+    @include respond(tab-land) {
+        padding: 17rem 3rem 20rem 3rem;
+    }
 }
 
 .section-features {
