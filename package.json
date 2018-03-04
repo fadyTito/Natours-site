@@ -6,7 +6,12 @@
   "scripts": {
     "watch:sass": "node-sass app/assets/sass/styles.scss app/assets/styles/styles.css -w",
     "liveServer": "live-server app",
-    "start": "npm-run-all --parallel liveServer watch:sass"
+    "start": "npm-run-all --parallel liveServer watch:sass",
+    "compile:sass": "node-sass app/assets/sass/styles.scss app/assets/css/styles.comp.css",
+    "concat:css": "concat -o app/assets/css/styles.concat.css app/assets/icons/icon-font.css app/assets/css/styles.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" app/assets/css/styles.concat.css -o app/assets/css/styles.prefix.css",
+    "compress:css": "node-sass app/assets/css/styles.prefix.css docs/assets/styles/styles.min.css --output-style compressed",
+    "build": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
   "author": "fady tito",
   "license": "ISC",
