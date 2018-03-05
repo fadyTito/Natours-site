@@ -9,6 +9,10 @@
     @include greenImageGradient("../images/hero.jpg");
   }
 
+  @include respond(tab-port) {
+    height: 85vh;
+  }
+
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
