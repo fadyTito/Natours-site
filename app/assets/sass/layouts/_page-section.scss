@@ -61,9 +61,13 @@
 }
 
 .section-stories {
-   background-image: linear-gradient(rgba($white, .9), rgba($white, .9)), url("../images/nat-10.jpg");
-   background-size: cover;
-   background-position: center;
+    background-image: linear-gradient(rgba($white, .9), rgba($white, .9)), url("../images/nat-10.jpg");
+    background-size: cover;
+    background-position: center;
+
+    @include respond(tab-port) {
+        background-image: none;
+    }
 }
 
 .section-book {
