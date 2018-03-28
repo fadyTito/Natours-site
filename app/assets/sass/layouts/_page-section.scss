@@ -28,7 +28,7 @@
 }
 
 .section-features {
-    @include greenImageGradient("../images/nat-4.jpg");
+    @include greenImageGradient("../images/nat-4-min.jpg");
     transform: skewY(-7deg);
     margin-top: -10rem; 
     padding: 20rem 3rem;  
@@ -61,13 +61,7 @@
 }
 
 .section-stories {
-    background-image: linear-gradient(rgba($white, .9), rgba($white, .9)), url("../images/nat-10.jpg");
-    background-size: cover;
-    background-position: center;
-
-    @include respond(tab-port) {
-        background-image: none;
-    }
+    position: relative;
 }
 
 .section-book {
@@ -76,7 +70,7 @@
                             rgba($white, .9) 0%,
                             rgba($white, .9) 50%,
                             transparent 50%) ,
-        url("../images/nat-11.jpg");
+        url("../images/nat-11-min.jpg");
         background-size: cover;
         background-position: center;
         box-shadow: 0 1.5rem 4rem rgba($black, .2);
@@ -87,12 +81,12 @@
             rgba($white, .9) 0%,
             rgba($white, .9) 65%,
             transparent 65%) ,
-            url("../images/nat-11.jpg");
+            url("../images/nat-11-min.jpg");
             background-size: cover;
         }
 
         @include respond(tab-port) {
-            background-image: linear-gradient(rgba($white, .9), rgba($white, .9)), url("../images/nat-11.jpg");
+            background-image: linear-gradient(rgba($white, .9), rgba($white, .9)), url("../images/nat-11-min.jpg");
         }
 
         &__form {

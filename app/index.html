@@ -91,11 +91,11 @@
         </div>
         <div class="col-1-of-2">
           <div class="gallery">
-            <img srcset="assets/images/nat-1.jpg 300w, assets/images/nat-1-large.jpg 1000w" sizes="(max-width: 56.25em) 175px, 300px"
+            <img srcset="assets/images/nat-1-min.jpg 300w, assets/images/nat-1-large-min.jpg 1000w" sizes="(max-width: 56.25em) 175px, 300px"
               alt="nature photo" class="gallery__image gallery__image--left">
-            <img srcset="assets/images/nat-2.jpg 300w, assets/images/nat-2-large.jpg 1000w" sizes="(max-width: 56.25em) 175px, 300px"
+            <img srcset="assets/images/nat-2-min.jpg 300w, assets/images/nat-2-large-min.jpg 1000w" sizes="(max-width: 56.25em) 175px, 300px"
               alt="nature photo" class="gallery__image gallery__image--right">
-            <img srcset="assets/images/nat-3.jpg 300w, assets/images/nat-3-large.jpg 1000w" sizes="(max-width: 56.25em) 175px, 300px"
+            <img srcset="assets/images/nat-3-min.jpg 300w, assets/images/nat-3-large-min.jpg 1000w" sizes="(max-width: 56.25em) 175px, 300px"
               alt="nature photo" class="gallery__image gallery__image--middle">
           </div>
         </div>
@@ -237,12 +237,12 @@
 
     <!-- Start Stories-section -->
     <section class="section-stories page-section">
-      <!--  <div class="bg-video">
+      <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
-          <source src="assets/images/video.mp4" type="video/mp4">
-          <source src="assets/images/video.webm" type="video/webm">
+          <source src="assets/images/Clipchamp720.mp4" type="video/mp4">
+          <!-- <source src="assets/images/video.webm" type="video/webm"> -->
         </video>
-      </div> -->
+      </div>
 
       <h2 class="headline-2 headline-2--b-margin-lg">
         <span>we make people genuinely happy</span>
@@ -250,7 +250,7 @@
       <div class="row">
         <div class="story">
           <figure class="story__figure">
-            <img src="assets/images/nat-8.jpg" alt="person on a tour" class="story__figure__image">
+            <img src="assets/images/nat-8-min.jpg" alt="person on a tour" class="story__figure__image">
             <figcaption class="story__figure__caption">mary smith</figcaption>
           </figure>
           <div class="story__text generic-content">
@@ -264,7 +264,7 @@
       <div class="row">
         <div class="story">
           <figure class="story__figure">
-            <img src="assets/images/nat-9.jpg" alt="person on a tour" class="story__figure__image">
+            <img src="assets/images/nat-9-min.jpg" alt="person on a tour" class="story__figure__image">
             <figcaption class="story__figure__caption">jack wilson</figcaption>
           </figure>
           <div class="generic-content story__text">
@@ -357,11 +357,7 @@
       </div>
       <div class="col-1-of-2">
         <p class="footer__copyright">
-          Built by
-          <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course
-          <a href="#" class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for
-          both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas
-          Schmedtmann, is of course highly appreciated!
+          &copy; Copyright 2017 – Natours-site All rights reserved.
         </p>
       </div>
     </div>
@@ -399,6 +395,12 @@
   </div>
  End Modal  -->
 
+  <script>
+    // Hide video on small screen devices
+    if (window.matchMedia('(max-width: 1200px)').matches) {
+      document.querySelector('.bg-video').remove();
+    } 
+  </script>
 </body>
 
 </html>

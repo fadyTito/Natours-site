@@ -8,7 +8,7 @@
     text-align: center;
 
     @include respond(tab-land) {
-        /* height: 40rem; */
+        height: 40rem;
     }
 
     &__icon {

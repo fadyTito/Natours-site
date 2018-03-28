@@ -55,15 +55,15 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100% );
     
         &-1 {
-            background-image: linear-gradient(to right bottom, $secondary-1-light, $secondary-1-dark), url('../images/nat-5.jpg');
+            background-image: linear-gradient(to right bottom, $secondary-1-light, $secondary-1-dark), url('../images/nat-5-min.jpg');
         }
     
         &-2 {
-            @include greenImageGradient("../images/nat-6.jpg");
+            @include greenImageGradient("../images/nat-6-min.jpg");
         }
     
         &-3 {
-            background-image: linear-gradient(to right bottom, $secondary-2-light, $secondary-2-dark), url('../images/nat-7.jpg');
+            background-image: linear-gradient(to right bottom, $secondary-2-light, $secondary-2-dark), url('../images/nat-7-min.jpg');
         }
     }
     

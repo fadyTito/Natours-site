@@ -11,6 +11,6 @@
     &__content {
         height: 100%; 
         width: 100%;
-        object-fit: cover; // l object-fit 3shan ast3mlha lazm a7dd l width we l height bta3t l element nfso l2nha btzbt l sora aw l video 3la m2as l element nfso msh l parent
+        object-fit: cover; // WE have to specifiy width and height in order to use object fit because it fits the object according to the container element not the parent element
     }
 }

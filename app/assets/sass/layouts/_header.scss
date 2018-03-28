@@ -3,10 +3,10 @@
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   position: relative;
   background-position: center;
-  @include greenImageGradient("../images/hero-small.jpg");
+  @include greenImageGradient("../images/hero-small-min.jpg");
 
   @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-    @include greenImageGradient("../images/hero.jpg");
+    @include greenImageGradient("../images/hero-min.jpg");
   }
 
   @include respond(tab-port) {
