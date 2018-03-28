@@ -7,9 +7,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/icons/icon-font.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/styles/styles.min.css">
   <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+  <script>/* This empty script for fix the chrome bug which fires css transition while page is still loading */</script>
 
   <title>Natours | Exciting tours for adventurous people</title>
 </head>
@@ -239,8 +239,8 @@
     <section class="section-stories page-section">
       <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
-          <source src="assets/images/Clipchamp720.mp4" type="video/mp4">
-          <!-- <source src="assets/images/video.webm" type="video/webm"> -->
+          <source src="assets/images/Clipchamp480.mp4" type="video/mp4">
+          <source src="assets/images/Clipchamp480.mp4.webm" type="video/webm">
         </video>
       </div>
 
@@ -395,12 +395,6 @@
   </div>
  End Modal  -->
 
-  <script>
-    // Hide video on small screen devices
-    if (window.matchMedia('(max-width: 1200px)').matches) {
-      document.querySelector('.bg-video').remove();
-    } 
-  </script>
 </body>
 
 </html>
