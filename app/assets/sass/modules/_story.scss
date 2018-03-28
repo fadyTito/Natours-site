@@ -16,7 +16,7 @@
 
     @include respond(phone) {
         transform: skewX(0);
-        padding: 4rem;
+        // padding: 4rem;
     }
 
     /* Circle shape and wrapping text styling */
@@ -31,7 +31,7 @@
         overflow: hidden;
 
         @include respond(phone) {
-            transform: translateX(-3rem) skewX(0);
+            transform: translateX(-1rem) skewX(0);
             float: none;
             margin: 0  auto 3rem auto;
             shape-outside: none;
@@ -44,6 +44,7 @@
         transition: all .5s;
         backface-visibility: hidden;
         
+        @include respond(phone) {transform: translateX(0) scale(1.4)}
     }
 
     &__figure__caption {

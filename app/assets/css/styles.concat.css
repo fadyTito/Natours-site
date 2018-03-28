@@ -914,8 +914,7 @@ a {
       padding-left: 7rem; } }
   @media (max-width: 37.5em) {
     .story {
-      transform: skewX(0);
-      padding: 4rem; } }
+      transform: skewX(0); } }
   .story__figure {
     width: 15rem;
     height: 15rem;
@@ -927,7 +926,7 @@ a {
     /* 600px */ }
     @media (max-width: 37.5em) {
       .story__figure {
-        transform: translateX(-3rem) skewX(0);
+        transform: translateX(-1rem) skewX(0);
         float: none;
         margin: 0  auto 3rem auto;
         shape-outside: none; } }
@@ -935,7 +934,11 @@ a {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     transition: all .5s;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    /* 600px */ }
+    @media (max-width: 37.5em) {
+      .story__figure__image {
+        transform: translateX(0) scale(1.4); } }
   .story__figure__caption {
     color: #fff;
     font-size: 1.7rem;
