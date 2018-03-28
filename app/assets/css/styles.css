@@ -300,7 +300,7 @@ a {
   /* 1200px */ }
   @media (max-width: 75em) {
     .feature-box {
-      height: 40rem; } }
+      height: auto; } }
   .feature-box__icon {
     display: inline-block;
     background-image: linear-gradient(to right, #7ed56f, #28b485);
