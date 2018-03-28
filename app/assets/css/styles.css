@@ -468,7 +468,8 @@ a {
       padding-left: 7rem; } }
   @media (max-width: 37.5em) {
     .story {
-      transform: skewX(0); } }
+      transform: skewX(0);
+      padding: 4rem; } }
   .story__figure {
     width: 15rem;
     height: 15rem;
