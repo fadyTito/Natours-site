@@ -32,6 +32,10 @@
     top: 40%;
     text-align: center;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      top: 50%;
+    }
   }
 }
 

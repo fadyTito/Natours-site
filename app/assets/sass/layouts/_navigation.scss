@@ -22,6 +22,7 @@
         text-align: center;
 
         @include respond(tab-port) {
+            transform: scale(.8);
             top: 3rem;
             right: 3rem;
         }
@@ -39,6 +40,7 @@
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
         @include respond(tab-port) {
+            transform: scale(.8);
             top: 3.25rem;
             right: 3.25rem;
         }
