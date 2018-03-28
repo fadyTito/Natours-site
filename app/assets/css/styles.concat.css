@@ -926,7 +926,10 @@ a {
     /* 600px */ }
     @media (max-width: 37.5em) {
       .story__figure {
-        transform: translateX(-3rem) skewX(0); } }
+        transform: translateX(-3rem) skewX(0);
+        float: none;
+        margin: 0  auto 3rem auto;
+        shape-outside: none; } }
   .story__figure__image {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
